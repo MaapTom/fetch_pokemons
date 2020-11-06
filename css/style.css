@@ -1,0 +1,233 @@
+/* Fonte */
+@font-face {
+    font-family: Pokemon;
+    src: url(../fonts/Pokemon\ Hollow.ttf);
+}
+
+
+/* gerais */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #effbf1;
+    font-family: 'Noto Sans TC';
+}
+
+:root {
+    font-size: 16px;
+}
+
+/* containers */
+.container {
+    max-width: 1440px;
+    height: auto;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main {
+    width: 100%;
+
+    margin: 50px 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+h1 {
+
+    font-size: 2rem;
+    font-family: Pokemon;
+    color: #dfd368;
+
+    margin-top: 20px;
+}
+
+/* campo de pesquisa */
+.search{
+    width: 100%;
+
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[name="search"] {
+    font-size: 1.25rem;
+
+    max-width: 520px;
+    height: 20px;
+    width: 100%;
+
+    background-color: rgb(250, 250, 250);
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+
+    padding: 15px;
+    margin-left: 8px;
+
+    display: inline;
+
+    outline: none;
+}
+
+input[type="submit"] {
+    font-size: 1.125rem;
+
+    height: 50px;
+
+    border: none;
+    border-radius: 0px 20px 20px 0px;
+
+    background-color: #b3f7c6;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+
+    padding: 15px;
+
+    color: #5D606F;
+
+    margin-right: 8px;
+
+    outline: none;
+    cursor: pointer;
+}
+
+.clean {
+    display: block;
+
+    border: none;
+    background: transparent;
+
+    margin-left: 10px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.clean img {
+    width: 25px;
+    transition: all .2s;
+}
+
+.clean img:hover {
+    transform: rotate(-90deg);
+}
+
+/* cards */
+
+.content {
+    width: 100%;
+    height: auto;
+
+    margin-top: 50px;
+
+    display: flex;
+
+    flex-direction: row-reverse;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+ul{
+    width: 280px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: rgb(236, 247, 235);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .2);
+
+    border-radius: 20px;
+
+    margin: 20px;
+    padding: 10px;
+
+    transition: all .2s;
+}
+
+ul:hover {
+    transform: scale(0.975);
+}
+
+ul img{
+    width: 100%;
+
+    display: block;
+}
+
+ul li {
+    list-style: none;
+    padding: 5px;
+
+    font-size: 0.975rem;
+    letter-spacing: 0.8px;
+    line-height: 24px;
+    color: #5D606F;
+}
+
+
+/* loading */
+
+.loading {
+    margin-top: 30px;
+    display: none;
+}
+
+.loading span{
+    animation: load .5s cubic-bezier(0.6, 0.1, 1, 0.4);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.loading span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:  rgb(171, 204, 168);
+}
+
+@keyframes load{
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(30px, 0, 0);
+    }
+}
+
+/* mensagem de erro */
+
+p {
+    margin-top: 30px;
+
+    display: none;
+}
+
+/* media querie */
+
+@media (max-width: 425px) {
+    .search{
+        width: 280px;
+    }
+
+    .clean {
+        margin-left: 0px;
+    }
+}
