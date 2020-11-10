@@ -66,9 +66,9 @@ async function montarCard(dados) {
   try{
     const dadosDescricao = await fetch(dados.species.url);
     const converteDados = await dadosDescricao.json();
-
     const descricao = document.createElement('li');
-    const textDescricao = document.createTextNode("Descriação: "+converteDados.flavor_text_entries[1].flavor_text) || 'Descricao não encontrada';
+
+    const textDescricao = document.createTextNode("Descrição: "+converteDados.flavor_text_entries[1].flavor_text) || 'Descricao não encontrada';
     descricao.appendChild(textDescricao);
     renderCard(imagem, name, tipo, descricao , habilidades);
 
