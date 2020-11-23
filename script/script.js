@@ -82,7 +82,7 @@ function renderCard(...values) {
   loading(false)
   values.forEach((value) => {
     containerUl.appendChild(value)
-    container.appendChild(containerUl);
+    container.insertBefore(containerUl, container.firstElementChild);
   })
 }
 buttonEnviar.addEventListener('click', puxarDados);
